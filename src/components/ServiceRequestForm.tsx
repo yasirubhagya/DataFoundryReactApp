@@ -4,7 +4,6 @@ import type { Schema } from "../../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
 import { ulid } from "ulidx";
 import { uploadData } from 'aws-amplify/storage';
-//import { getCurrentUser } from 'aws-amplify/auth';
 
 
 function calculateResolutionDate(createdDate: Date, severity: string):Date {
@@ -88,7 +87,6 @@ function ServiceRequestForm() {
             photo: Yup.mixed().required('required')
                 .test('fileFormat', 'Only jpg files are allowed', (value) => {
                     if (value) {
-                        console.log(value)
                         const supportedFormats = ['jpg'];
                         return supportedFormats.includes((value as File).name?.split('.').pop() || '');
                     }

@@ -28,7 +28,7 @@ function ServiceRequestItem({ id, caseId, name, severity, createdAt, fileName, r
 
     function deleteServiceRequest(id: string) {
         client.models.ServiceRequest.delete({ id }, { authMode: 'userPool' })
-            .then(res => {
+            .then(() => {
                 return remove({ path: `service-requests/ss/${caseId}/${fileName}` })
             })
             .catch(err => {
