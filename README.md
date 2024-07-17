@@ -20,7 +20,7 @@ for local testing also you will need a aws account
 
 1) setup aws cli with proper credentials
 2) clone the repository to your local machine
-3) run the command 'npx ampx sandbox --profile <your aws cli profile>'
+3) run the command 'npx ampx sandbox --profile 'your aws cli profile'
 3) in another terminal run 'npm run dev' to lunch the webapp
 4) register with your email to login in to the application
 ## Deploying to AWS
